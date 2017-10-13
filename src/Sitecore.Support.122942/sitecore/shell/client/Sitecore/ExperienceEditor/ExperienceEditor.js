@@ -566,7 +566,14 @@
                             app.postServerRequest(requestType, postContext, function (response) {
                                 if (response.error) {
                                     if (app && app.handleResponseErrorMessage) {
-                                        app.handleResponseErrorMessage(response, true);
+                                        // Sitecore.Support.122942
+                                        //app.handleResponseErrorMessage(response, true);
+                                        if (response.errorMessage === "USER_NOT_LOGGED_IN") {
+                                            location.reload();
+                                            return;
+                                        } else {
+                                            app.handleResponseErrorMessage(response, true);
+                                        }
                                     } else {
                                         if (response.errorMessage) {
                                             //experienceEditor.Dialogs.alert(response.errorMessage);
