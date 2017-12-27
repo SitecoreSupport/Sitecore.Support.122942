@@ -77,9 +77,6 @@
     <None Include="web.config" />
   </ItemGroup>
   <ItemGroup />
-  <ItemGroup>
-    <Content Include="sitecore\shell\client\Sitecore\ExperienceEditor\ExperienceEditor.js" />
-  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
